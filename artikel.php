@@ -1,13 +1,13 @@
 <?php
 // Ambil data artikel dan kategori dari API
-$kategoriData = json_decode(file_get_contents("https://saleshinoindonesia.com/admin/api/get_kategori.php"), true);
+$kategoriData = json_decode(file_get_contents("https://dealerhinojakartabarat.com/admin/api/get_kategori.php"), true);
 $search = $_GET['search'] ?? '';
 $selectedKategori = $_GET['kategori'] ?? '';
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $perPage = 6;
 
 // Bangun URL API dengan filter jika ada
-$apiUrl = "https://saleshinoindonesia.com/admin/api/get_artikel.php";
+$apiUrl = "https://dealerhinojakartabarat.com/admin/api/get_artikel.php";
 $params = [];
 if ($search !== '') {
   $params[] = "search=" . urlencode($search);
@@ -99,7 +99,7 @@ $artikel = array_slice($artikelData, $offset, $perPage);
       <div class="container header-content navbar">
     <!-- Logo -->
     <div class="header-title">
-      <a href="https://saleshinoindonesia.com">
+      <a href="https://dealerhinojakartabarat.com/">
         <img src="img/logo3.png" alt="Logo Hino" style="height: 60px" />
       </a>
     </div>
@@ -197,36 +197,64 @@ $artikel = array_slice($artikelData, $offset, $perPage);
       <div class="footer-container">
         <div class="footer-section">
           <img src="img/logo3.png" alt="Logo" class="footer-logo" />
-          <p>Nathan, Sales Hino Indonesia yang berpengalaman dan profesional, siap menjadi mitra terbaik Anda dalam memenuhi kebutuhan kendaraan niaga.</p>
+          <p>
+            Romi, Sales Hino Indonesia yang berpengalaman dan profesional, siap
+            menjadi mitra terbaik Anda dalam memenuhi kebutuhan kendaraan niaga.
+          </p>
         </div>
         <div class="footer-section">
           <h4>HUBUNGI KAMI</h4>
-          <p>📞 0859-7528-7684</p>
-          <p>📧 saleshinojabodetabek@gmail.com</p>
-          <p>📍 Golf Lake Ruko Venice, Jl. Lkr. Luar Barat No.78 Blok B, RT.9/RW.14, Cengkareng Tim., Kecamatan Cengkareng, Jakarta</p>
-          <div class="footer-social" style="margin-top: 20px">
+          <p>📞 0822 6286 007</p>
+          <p>📧 septihadromy861@gmail.com</p>
+          <p>
+            📍 Golf Lake Ruko Venice, Jl. Lkr. Luar Barat No.78 Blok B,
+            RT.9/RW.14, Cengkareng Tim., Kecamatan Cengkareng, Jakarta
+          </p>
+          <div class="footer-social">
             <h4>SOSIAL MEDIA</h4>
             <div class="social-icons">
-              <a href="https://www.instagram.com/saleshinojabodetabek" target="_blank"><i data-feather="instagram"></i></a>
-              <a href="https://wa.me/+6285975287684" target="_blank"><i data-feather="phone"></i></a>
-              <a href="https://www.facebook.com/profile.php?id=61573843992250" target="_blank"><i data-feather="facebook"></i></a>
+              <a
+                href="https://www.instagram.com/romydumm"
+                target="_blank"
+                aria-label="Instagram Sales Hino Jabodetabek"
+              >
+                <i data-feather="instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/+628226286007?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google"
+                target="_blank"
+                aria-label="WhatsApp Sales Hino Jabodetabek"
+              >
+                <i data-feather="phone"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/share/1A8eoMcNJP/"
+                target="_blank"
+                aria-label="Facebook Sales Hino Jabodetabek"
+              >
+                <i data-feather="facebook"></i>
+              </a>
             </div>
           </div>
         </div>
         <div class="footer-section">
-          <div class="google-map-container" style="margin-top: 20px">
-            <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
+          <div class="google-map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.001117199873!2d106.72798237355298!3d-6.130550360104524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f70ab03b3611%3A0x2e6e345ac4d4fd04!2sHINO%20CENGKARENG%20(DGMI)!5e0!3m2!1sid!2sid!4v1752934707067!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Sales Hino Indonesia. All Rights Reserved.</p>
+        <p>&copy; 2025 Dealer Hino Jakarta Barat. All Rights Reserved.</p>
       </div>
     </footer>
-
-<!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
-<script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-1c150e27-6597-4113-becd-79df393b9756" data-elfsight-app-lazy></div>
 
     <script>feather.replace();</script>
   </body>

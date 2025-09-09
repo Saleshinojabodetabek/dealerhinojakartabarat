@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Title -->
-    <title>Dealer Hino Jabodetabek | Sales Truck Hino Terbaik di Indonesia</title>
+    <title>Dealer Hino Resmi Jakarta | Sales Truck Hino Terbaik di Jabodetabek</title>
 
     <!-- Meta Description -->
-    <meta name="description" content="Dealer Resmi Hino Jakarta. Hubungi : 0859 7528 7684 / 0882 1392 5184 Untuk mendapatkan informasi produk Hino. Layanan Terbaik dan Jaminan Mutu." />
+    <meta name="description" content="Dealer Resmi Hino Jakarta. Hubungi : 0822 6286 007 Untuk mendapatkan informasi produk Hino. Layanan Terbaik dan Jaminan Mutu." />
     
     <!-- Meta Keywords -->
     <meta name="keywords" content="sales Hino, sales Hino Jakarta, sales Hino Jabodetabek, sales Hino Tangerang, sales Hino Bekasi, sales Hino Depok, sales Hino Bogor, sales truck Hino, dealer Hino, dealer Hino Jabodetabek, dealer Hino Tangerang, dealer Hino Bekasi, dealer Hino Depok, dealer Hino Bogor, dealer truck Hino, dealer Hino resmi, dealer Hino Jakarta, dealer Hino Indonesia, jual truk Hino, kredit truk Hino, cicilan truk Hino, promo truk Hino, harga truk Hino terbaru, diskon truk Hino, truk Hino Dutro, truk Hino 300, truk Hino 500, Hino Dutro 136 HD, Hino Dutro 4x4, Hino Dutro box, Hino Dutro engkel, spesifikasi Hino Dutro, modifikasi truk Hino, gambar truk Hino, keunggulan truk Hino, truk Hino untuk bisnis, truk Hino untuk logistik, perbandingan truk Hino dan Isuzu Elf, dealer truk Hino termurah" />
@@ -24,20 +24,20 @@
     </script>
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://saleshinoindonesia.com/" />
+    <link rel="canonical" href="https://dealerhinojakartabarat.com/" />
 
     <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:title" content="Dealer Hino Indonesia | Promo & Harga Truk Terbaik" />
     <meta property="og:description" content="Dapatkan promo truk Hino terbaru di Jakarta. Konsultasi langsung dengan sales profesional. Gratis penawaran & layanan cepat!" />
-    <meta property="og:image" content="https://saleshinoindonesia.com/img/promohino1.jpg" />
-    <meta property="og:url" content="https://saleshinoindonesia.com/" />
+    <meta property="og:image" content="https://dealerhinojakartabarat.com/img/promohino1.jpg" />
+    <meta property="og:url" content="https://dealerhinojakartabarat.com/" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Dealer Hino Indonesia | Promo & Harga Truk Terbaik" />
     <meta name="twitter:description" content="Hubungi kami untuk mendapatkan penawaran terbaik truk Hino. Layanan cepat & profesional." />
-    <meta name="twitter:image" content="https://saleshinoindonesia.com/img/promohino1.jpg" />
+    <meta name="twitter:image" content="https://dealerhinojakartabarat.com/img/promohino1.jpg" />
 
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
@@ -71,11 +71,11 @@
         "@context": "https://schema.org",
         "@type": "AutoDealer",
         "name": "Dealer Hino Indonesia - Jakarta",
-        "image": "https://saleshinoindonesia.com/img/logo3.png",
-        "url": "https://saleshinoindonesia.com",
-        "logo": "https://saleshinoindonesia.com/img/logo3.png",
-        "telephone": "+62-859-7528-7684",
-        "email": "saleshinojabodetabek@gmail.com",
+        "image": "https://dealerhinojakartabarat.com/img/logo3.png",
+        "url": "https://dealerhinojakartabarat.com/",
+        "logo": "https://dealerhinojakartabarat.com/img/logo3.png",
+        "telephone": "++62-822-2628-6007",
+        "email": "septihadromy861@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Golf Lake Ruko Venice, Jl. Lkr. Luar Barat No.78 Blok B, RT.9/RW.14, Cengkareng Tim.",
@@ -87,9 +87,9 @@
         "openingHours": "Mo-Sa 08:00-17:00",
         "priceRange": "$$",
         "sameAs": [
-          "https://www.instagram.com/saleshinojabodetabek",
-          "https://www.facebook.com/profile.php?id=61573843992250",
-          "https://wa.me/6285975287684"
+          "https://www.instagram.com/romydumm",
+          "https://www.facebook.com/share/1A8eoMcNJP/",
+          "https://wa.me/6282226286007"
         ]
       }
     </script>
@@ -99,7 +99,7 @@
     <header>
       <div class="container header-content navbar">
         <div class="header-title">
-          <a href="https://saleshinoindonesia.com">
+          <a href="https://dealerhinojakartabarat.com/">
             <img src="img/logo3.png" alt="Logo Hino" style="height: 60px" />
           </a>
         </div>
@@ -128,7 +128,7 @@
       <div class="container">
         <h2>Sales Hino No.1 Dengan Layanan Profesional & Cepat</h2>
         <p>Profesional, cepat, dan siap memberikan solusi terbaik untuk kebutuhan truk bisnis Anda. Layanan responsif, proses mudah, dan harga kompetitif!</p>
-        <a href="https://wa.me/+6285975287684?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google" class="btn btn-contact">Hubungi Sekarang</a>
+        <a href="https://wa.me/+628226286007?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google" class="btn btn-contact">Hubungi Sekarang</a>
       </div>
     </section>
     
@@ -140,14 +140,14 @@
             <h2>Sales Hino Indonesia</h2>
             <div class="divider"></div>
             <p>
-              Nathan, Sales Hino Indonesia yang berpengalaman dan profesional, siap menjadi mitra terbaik Anda dalam memenuhi kebutuhan kendaraan niaga. Dengan pemahaman mendalam tentang produk Hino serta solusi pembiayaan yang fleksibel, Nathan selalu memberikan pelayanan cepat, ramah, dan tepat sasaran untuk setiap jenis usaha.
+              Romi, Sales Hino Jakarta yang berpengalaman dan profesional, siap menjadi mitra terbaik Anda dalam memenuhi kebutuhan kendaraan niaga. Dengan pemahaman mendalam tentang produk Hino serta solusi pembiayaan yang fleksibel, Romi selalu memberikan pelayanan cepat, ramah, dan tepat sasaran untuk setiap jenis usaha.
             </p>
             <p>
-          Komitmen Nathan adalah memberikan lebih dari sekadar penjualan. Ia hadir untuk membangun hubungan jangka panjang dengan pelanggan melalui layanan after-sales yang responsif, konsultasi kebutuhan armada yang akurat, serta penawaran harga terbaik. Percayakan kebutuhan truk Hino Anda kepada Nathan, dan rasakan pengalaman membeli yang aman, nyaman, dan menguntungkan.
+          Komitmen Romi adalah memberikan lebih dari sekadar penjualan. Ia hadir untuk membangun hubungan jangka panjang dengan pelanggan melalui layanan after-sales yang responsif, konsultasi kebutuhan armada yang akurat, serta penawaran harga terbaik. Percayakan kebutuhan truk Hino Anda kepada Romi, dan rasakan pengalaman membeli yang aman, nyaman, dan menguntungkan.
         </p>
             <div class="contact-buttons">
               <a href="https://wa.me/6285975287684" class="btn whatsapp-btn"><i class="fab fa-whatsapp"></i> +62 859-7528-7684</a>
-              <a href="mailto:saleshinojabodetabek@gmail.com" class="btn email-btn"><i class="fas fa-envelope"></i> saleshinojabodetabek@gmail.com</a>
+              <a href="mailto:septihadromy861@gmail.com" class="btn email-btn"><i class="fas fa-envelope"></i> septihadromy861@gmail.com</a>
             </div>
           </div>
           <div class="image-gallery">
@@ -191,7 +191,7 @@
         <div class="divider"></div>
         <div class="contact-item"><img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone" /><div><strong>Phone Call</strong><br />+62 882-1392-5184</div></div>
         <div class="divider"></div>
-        <div class="contact-item"><img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email" /><div><strong>Email</strong><br />saleshinojabodetabek@gmail.com</div></div>
+        <div class="contact-item"><img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email" /><div><strong>Email</strong><br />septihadromy861@gmail.com</div></div>
       </div>
     </div>
 
@@ -334,7 +334,7 @@ Hemat biaya, kendaraan lebih terawat, performa maksimal.
         <p>Dapatkan informasi terbaru seputar Truk Hino, perawatan, dan promo terbaik.</p>
         <div class="blog-grid">
           <?php
-            $artikelData = json_decode(file_get_contents("https://saleshinoindonesia.com/admin/api/get_artikel.php"), true);
+            $artikelData = json_decode(file_get_contents("https://dealerhinojakartabarat.com/admin/api/get_artikel.php"), true);
             if (is_array($artikelData)) {
               $terbaru = array_slice($artikelData, 0, 3);
               foreach ($terbaru as $artikel):
@@ -352,32 +352,28 @@ Hemat biaya, kendaraan lebih terawat, performa maksimal.
       </div>
     </section>
 
-    <!-- WhatsApp Chat -->
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-1c150e27-6597-4113-becd-79df393b9756" data-elfsight-app-lazy></div>
-
     <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-container">
         <div class="footer-section">
           <img src="img/logo3.png" alt="Logo" class="footer-logo" />
-          <p>Nathan, Sales Hino Indonesia yang berpengalaman dan profesional, siap menjadi mitra terbaik Anda dalam memenuhi kebutuhan kendaraan niaga.</p>
+          <p>Romi, Sales Hino Indonesia yang berpengalaman dan profesional, siap menjadi mitra terbaik Anda dalam memenuhi kebutuhan kendaraan niaga.</p>
         </div>
         <div class="footer-section">
           <h4>HUBUNGI KAMI</h4>
-          <p>📞 0859-7528-7684</p>
-          <p>📧 saleshinojabodetabek@gmail.com</p>
+          <p>📞 0822 6286 007</p>
+          <p>📧 septihadromy861@gmail.com</p>
           <p>📍 Golf Lake Ruko Venice, Jl. Lkr. Luar Barat No.78 Blok B, RT.9/RW.14, Cengkareng Tim., Kecamatan Cengkareng, Jakarta</p>
           <div class="footer-social">
             <h4>SOSIAL MEDIA</h4>
           <div class="social-icons">
-            <a href="https://www.instagram.com/saleshinojabodetabek" target="_blank" aria-label="Instagram Sales Hino Jabodetabek">
+            <a href="https://www.instagram.com/romydumm" target="_blank" aria-label="Instagram Sales Hino Jabodetabek">
               <i data-feather="instagram"></i>
             </a>
-            <a href="https://wa.me/+6285975287684?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google" target="_blank" aria-label="WhatsApp Sales Hino Jabodetabek">
+            <a href="https://wa.me/+628226286007?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google" target="_blank" aria-label="WhatsApp Sales Hino Jabodetabek">
               <i data-feather="phone"></i>
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61573843992250" target="_blank" aria-label="Facebook Sales Hino Jabodetabek">
+            <a href="https://www.facebook.com/share/1A8eoMcNJP/" target="_blank" aria-label="Facebook Sales Hino Jabodetabek">
               <i data-feather="facebook"></i>
             </a>
           </div>
@@ -390,7 +386,7 @@ Hemat biaya, kendaraan lebih terawat, performa maksimal.
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Sales Hino Indonesia. All Rights Reserved.</p>
+        <p>&copy; 2025 Dealer Hino Jakarta Barat. All Rights Reserved.</p>
       </div>
     </footer>
 
