@@ -25,7 +25,7 @@ if ($id && is_array($data)) {
     <meta property="og:image" content="<?= htmlspecialchars($artikel['gambar']) ?>" />
     <meta property="og:url" content="https://dealerhinojakartabarat.com/detail_artikel.php?id=<?= $artikel['id'] ?>" />
     <title>Dealer Hino Indonesia | Sales Truck Hino Terbaik di Jabodetabek</title>
-    <meta name="description" content="Dealer Resmi Hino Jakarta. Hubungi : 0859 7528 7684 / 0882 1392 5184 Untuk mendapatkan informasi produk Hino. Layanan Terbaik dan Jaminan Mutu.">
+    <meta name="description" content="Dealer Resmi Hino Jakarta. Hubungi : 0822 2628 6007 Untuk mendapatkan informasi produk Hino. Layanan Terbaik dan Jaminan Mutu.">
     <link rel="icon" type="image/png" href="/img/favicon.png">
 
     <!-- Font -->
@@ -186,7 +186,7 @@ if ($id && is_array($data)) {
                 <i data-feather="instagram"></i>
               </a>
               <a
-                href="https://wa.me/+628226286007?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google"
+                href="https://wa.me/+6282226286007?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google"
                 target="_blank"
                 aria-label="WhatsApp Sales Hino Jabodetabek"
               >

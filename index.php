@@ -146,7 +146,7 @@
           Komitmen Romi adalah memberikan lebih dari sekadar penjualan. Ia hadir untuk membangun hubungan jangka panjang dengan pelanggan melalui layanan after-sales yang responsif, konsultasi kebutuhan armada yang akurat, serta penawaran harga terbaik. Percayakan kebutuhan truk Hino Anda kepada Romi, dan rasakan pengalaman membeli yang aman, nyaman, dan menguntungkan.
         </p>
             <div class="contact-buttons">
-              <a href="https://wa.me/6285975287684" class="btn whatsapp-btn"><i class="fab fa-whatsapp"></i> +62 859-7528-7684</a>
+              <a href="https://wa.me/+6282226286007" class="btn whatsapp-btn"><i class="fab fa-whatsapp"></i> Whatsapp</a>
               <a href="mailto:septihadromy861@gmail.com" class="btn email-btn"><i class="fas fa-envelope"></i> septihadromy861@gmail.com</a>
             </div>
           </div>
@@ -187,7 +187,7 @@
     <div class="contact-container">
       <div class="contact-tabs"><div class="tab active">Hubungi Kami</div></div>
       <div class="contact-info">
-        <div class="contact-item"><img src="img/cssupport.png" alt="WhatsApp" /><div><strong>Whatsapp</strong><br />+62 859-7528-7684</div></div>
+        <div class="contact-item"><img src="img/cssupport.png" alt="WhatsApp" /><div><strong>Whatsapp</strong><br />Whatsapp</div></div>
         <div class="divider"></div>
         <div class="contact-item"><img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone" /><div><strong>Phone Call</strong><br />+62 882-1392-5184</div></div>
         <div class="divider"></div>
