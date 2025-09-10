@@ -361,7 +361,7 @@ Hemat biaya, kendaraan lebih terawat, performa maksimal.
         </div>
         <div class="footer-section">
           <h4>HUBUNGI KAMI</h4>
-          <p>📞 0822 6286 007</p>
+          <p>📞 0822 2628 6007</p>
           <p>📧 septihadromy861@gmail.com</p>
           <p>📍 Golf Lake Ruko Venice, Jl. Lkr. Luar Barat No.78 Blok B, RT.9/RW.14, Cengkareng Tim., Kecamatan Cengkareng, Jakarta</p>
           <div class="footer-social">
@@ -370,7 +370,7 @@ Hemat biaya, kendaraan lebih terawat, performa maksimal.
             <a href="https://www.instagram.com/romydumm" target="_blank" aria-label="Instagram Sales Hino Jabodetabek">
               <i data-feather="instagram"></i>
             </a>
-            <a href="https://wa.me/+628226286007?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google" target="_blank" aria-label="WhatsApp Sales Hino Jabodetabek">
+            <a href="https://wa.me/+6282226286007?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google" target="_blank" aria-label="WhatsApp Sales Hino Jabodetabek">
               <i data-feather="phone"></i>
             </a>
             <a href="https://www.facebook.com/share/1A8eoMcNJP/" target="_blank" aria-label="Facebook Sales Hino Jabodetabek">
