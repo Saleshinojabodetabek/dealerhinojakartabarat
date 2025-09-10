@@ -189,7 +189,7 @@
       <div class="contact-info">
         <div class="contact-item"><img src="img/cssupport.png" alt="WhatsApp" /><div><strong>Whatsapp</strong><br />Whatsapp</div></div>
         <div class="divider"></div>
-        <div class="contact-item"><img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone" /><div><strong>Phone Call</strong><br />+62 882-1392-5184</div></div>
+        <div class="contact-item"><img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone" /><div><strong>Phone Call</strong><br />+62 822-2628-6007</div></div>
         <div class="divider"></div>
         <div class="contact-item"><img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email" /><div><strong>Email</strong><br />septihadromy861@gmail.com</div></div>
       </div>
