@@ -137,7 +137,7 @@
       <div class="container">
         <div class="about-content">
           <div class="text">
-            <h2>Sales Hino Indonesia</h2>
+            <h2>Sales Hino Jakarta</h2>
             <div class="divider"></div>
             <p>
               Romi, Sales Hino Jakarta yang berpengalaman dan profesional, siap menjadi mitra terbaik Anda dalam memenuhi kebutuhan kendaraan niaga. Dengan pemahaman mendalam tentang produk Hino serta solusi pembiayaan yang fleksibel, Romi selalu memberikan pelayanan cepat, ramah, dan tepat sasaran untuk setiap jenis usaha.
@@ -151,7 +151,7 @@
             </div>
           </div>
           <div class="image-gallery">
-            <img src="img/promohino1.jpg" alt="Promo Hino" />
+            <img src="img/bannerhino2.png" alt="Promo Hino" />
           </div>
           </div>
         </div>
@@ -357,7 +357,7 @@ Hemat biaya, kendaraan lebih terawat, performa maksimal.
       <div class="footer-container">
         <div class="footer-section">
           <img src="img/logo3.png" alt="Logo" class="footer-logo" />
-          <p>Romi, Sales Hino Indonesia yang berpengalaman dan profesional, siap menjadi mitra terbaik Anda dalam memenuhi kebutuhan kendaraan niaga.</p>
+          <p>Romi, Sales Hino Jakarta yang berpengalaman dan profesional, siap menjadi mitra terbaik Anda dalam memenuhi kebutuhan kendaraan niaga.</p>
         </div>
         <div class="footer-section">
           <h4>HUBUNGI KAMI</h4>
