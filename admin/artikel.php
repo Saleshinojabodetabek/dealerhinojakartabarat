@@ -43,10 +43,9 @@ $result = $conn->query($query);
       text-align: center;
       vertical-align: middle;
     }
-    .table tbody td {
-      vertical-align: middle;
-    }
-    /* --- Responsive --- */
+    .table tbody td { vertical-align: middle; }
+
+    /* --- Responsive, disamakan dengan pesan.php --- */
     @media (max-width: 992px) {
       .sidebar {
         position: relative;
@@ -58,32 +57,20 @@ $result = $conn->query($query);
         align-items: center;
         padding: 10px;
       }
-      .sidebar img {
-        max-width: 100px;
-        margin: 0;
-      }
+      .sidebar img { max-width: 100px; margin: 0; }
       .sidebar a {
         display: inline-block;
         margin: 0 6px;
         padding: 8px 12px;
       }
-      .content {
-        margin-left: 0;
-        margin-top: 10px;
-      }
-    }
-    @media (max-width: 768px) {
-      .table-responsive {
-        overflow-x: auto;
-      }
-      .btn-sm {
-        padding: 6px 8px;
-        font-size: 12px;
-      }
+      .content { margin-left: 0; margin-top: 10px; }
+      .table-responsive { font-size: 14px; } /* sama dengan pesan.php */
     }
     @media (max-width: 576px) {
-      h2 { font-size: 20px; }
-      .dashboard-header p { font-size: 14px; }
+      .sidebar a { font-size: 13px; padding: 6px 8px; }
+      .dashboard-header { padding: 15px; }
+      .dashboard-header h2 { font-size: 18px; }
+      .dashboard-header p { font-size: 13px; }
       table img { width: 70px; }
     }
   </style>
