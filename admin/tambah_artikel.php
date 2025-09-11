@@ -55,6 +55,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+
+    /* Sidebar */
     .sidebar {
       height: 100vh; background: #0d6efd; color: white; padding-top: 20px;
       position: fixed; width: 220px; text-align: center;
@@ -67,6 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     .sidebar a:hover, .sidebar a.active {
       background: #0b5ed7; border-radius: 6px;
     }
+
+    /* Content */
     .content { margin-left: 220px; padding: 20px; background: #f8f9fa; min-height: 100vh; }
     .dashboard-header {
       background: linear-gradient(90deg, #0d6efd, #0b5ed7);
@@ -75,6 +79,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     .form-card {
       background: white; padding: 25px; border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* === Media Query === */
+    @media (max-width: 991px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+      }
+      .sidebar img { max-width: 120px; margin: 10px auto; }
+      .sidebar a { text-align: center; padding: 10px; }
+      .content { margin-left: 0; padding: 15px; }
+    }
+
+    @media (max-width: 576px) {
+      .dashboard-header h2 { font-size: 1.2rem; }
+      .dashboard-header p { font-size: 0.9rem; }
+      .form-card { padding: 15px; }
+      .form-card .form-label { font-size: 0.9rem; }
+      .btn { padding: 6px 12px; font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -98,10 +123,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="form-card">
-      <?php if (!empty($error)): ?>
-        <div class="alert alert-danger"><?= $error ?></div>
-      <?php endif; ?>
-
       <form action="" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="judul" class="form-label">Judul Artikel</label>

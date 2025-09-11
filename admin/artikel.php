@@ -15,6 +15,7 @@ $result = $conn->query($query);
 <head>
   <meta charset="UTF-8">
   <title>Kelola Artikel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- penting untuk mobile -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
@@ -45,12 +46,52 @@ $result = $conn->query($query);
     .table tbody td {
       vertical-align: middle;
     }
+    /* --- Responsive --- */
+    @media (max-width: 992px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+      }
+      .sidebar img {
+        max-width: 100px;
+        margin: 0;
+      }
+      .sidebar a {
+        display: inline-block;
+        margin: 0 6px;
+        padding: 8px 12px;
+      }
+      .content {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+    @media (max-width: 768px) {
+      .table-responsive {
+        overflow-x: auto;
+      }
+      .btn-sm {
+        padding: 6px 8px;
+        font-size: 12px;
+      }
+    }
+    @media (max-width: 576px) {
+      h2 { font-size: 20px; }
+      .dashboard-header p { font-size: 14px; }
+      table img { width: 70px; }
+    }
   </style>
 </head>
 <body>
   <!-- Sidebar -->
   <div class="sidebar">
-    <div class="text-center mb-4">
+    <div class="text-center mb-4 d-none d-lg-block">
       <img src="../img/logo3.png" alt="Logo Hino">
     </div>
     <a href="dashboard.php">Dashboard</a>
@@ -79,40 +120,42 @@ $result = $conn->query($query);
 
     <a href="tambah_artikel.php" class="btn btn-success mb-3">+ Tambah Artikel</a>
 
-    <table class="table table-bordered table-striped align-middle text-center">
-      <thead>
-        <tr>
-          <th>Judul</th>
-          <th>Kategori</th>
-          <th>Tanggal</th>
-          <th>Gambar</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php while ($row = $result->fetch_assoc()): ?>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped align-middle text-center">
+        <thead>
           <tr>
-            <td><?= htmlspecialchars($row['judul']) ?></td>
-            <td><?= htmlspecialchars($row['nama_kategori'] ?? 'Tidak ada') ?></td>
-            <td><?= $row['tanggal'] ?></td>
-            <td>
-              <?php 
-                $gambar_path = "uploads/" . $row['gambar'];
-                if (!empty($row['gambar']) && file_exists($gambar_path)):
-              ?>
-                <img src="<?= $gambar_path ?>" width="100">
-              <?php else: ?>
-                <em>Gambar tidak tersedia</em>
-              <?php endif; ?>
-            </td>
-            <td>
-              <a href="edit_artikel.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
-              <a href="hapus_artikel.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
-            </td>
+            <th>Judul</th>
+            <th>Kategori</th>
+            <th>Tanggal</th>
+            <th>Gambar</th>
+            <th>Aksi</th>
           </tr>
-        <?php endwhile; ?>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <?php while ($row = $result->fetch_assoc()): ?>
+            <tr>
+              <td><?= htmlspecialchars($row['judul']) ?></td>
+              <td><?= htmlspecialchars($row['nama_kategori'] ?? 'Tidak ada') ?></td>
+              <td><?= $row['tanggal'] ?></td>
+              <td>
+                <?php 
+                  $gambar_path = "uploads/" . $row['gambar'];
+                  if (!empty($row['gambar']) && file_exists($gambar_path)):
+                ?>
+                  <img src="<?= $gambar_path ?>" width="100">
+                <?php else: ?>
+                  <em>Gambar tidak tersedia</em>
+                <?php endif; ?>
+              </td>
+              <td>
+                <a href="edit_artikel.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning mb-1">Edit</a>
+                <a href="hapus_artikel.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-danger mb-1" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+              </td>
+            </tr>
+          <?php endwhile; ?>
+        </tbody>
+      </table>
+    </div>
   </div>
 </body>
 </html>

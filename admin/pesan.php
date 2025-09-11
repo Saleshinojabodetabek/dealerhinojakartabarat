@@ -23,6 +23,7 @@ $result = $conn->query($query);
 <head>
   <meta charset="UTF-8">
   <title>Pesan Customer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- penting untuk HP -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
@@ -44,11 +45,9 @@ $result = $conn->query($query);
       color: white; padding: 20px; border-radius: 12px; margin-bottom: 25px;
     }
     table td { vertical-align: top; }
-    /* Header tabel selaras dengan tema */
     .table thead th {
       background: linear-gradient(90deg, #0d6efd, #0b5ed7);
-      color: white;
-      text-align: center;
+      color: white; text-align: center;
     }
     .table tbody td { vertical-align: middle; }
     .pagination .page-link { color: #0d6efd; }
@@ -56,12 +55,43 @@ $result = $conn->query($query);
       background-color: #0d6efd;
       border-color: #0d6efd;
     }
+
+    /* --- Responsive --- */
+    @media (max-width: 992px) {
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+      }
+      .sidebar img { max-width: 100px; margin: 0; }
+      .sidebar a {
+        display: inline-block;
+        margin: 0 6px;
+        padding: 8px 12px;
+      }
+      .content {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      .table-responsive { font-size: 14px; }
+    }
+    @media (max-width: 576px) {
+      .sidebar a { font-size: 13px; padding: 6px 8px; }
+      .dashboard-header { padding: 15px; }
+      .dashboard-header h2 { font-size: 18px; }
+      .dashboard-header p { font-size: 13px; }
+    }
   </style>
 </head>
 <body>
   <!-- Sidebar -->
   <div class="sidebar">
-    <div class="text-center mb-4">
+    <div class="text-center mb-4 d-none d-lg-block">
       <img src="../img/logo3.png" alt="Logo Hino">
     </div>
     <a href="dashboard.php">Dashboard</a>
@@ -81,38 +111,40 @@ $result = $conn->query($query);
       <div class="alert alert-success">Pesan berhasil dihapus.</div>
     <?php endif; ?>
 
-    <table class="table table-bordered table-striped align-middle text-center">
-      <thead>
-        <tr>
-          <th>Nama</th>
-          <th>No. HP</th>
-          <th>Pesan</th>
-          <th>Tanggal</th>
-          <th>Aksi</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php if ($result->num_rows > 0): ?>
-          <?php while ($row = $result->fetch_assoc()): ?>
-            <tr>
-              <td><?= htmlspecialchars($row['name']) ?></td>
-              <td><?= htmlspecialchars($row['phone']) ?></td>
-              <td class="text-start"><?= nl2br(htmlspecialchars($row['message'])) ?></td>
-              <td><?= $row['created_at'] ?? '-' ?></td>
-              <td>
-                <a href="hapus_pesan.php?id=<?= $row['id'] ?>"
-                   class="btn btn-sm btn-danger"
-                   onclick="return confirm('Yakin ingin menghapus pesan ini?')">Hapus</a>
-              </td>
-            </tr>
-          <?php endwhile; ?>
-        <?php else: ?>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped align-middle text-center">
+        <thead>
           <tr>
-            <td colspan="5" class="text-center text-muted">Belum ada pesan masuk.</td>
+            <th>Nama</th>
+            <th>No. HP</th>
+            <th>Pesan</th>
+            <th>Tanggal</th>
+            <th>Aksi</th>
           </tr>
-        <?php endif; ?>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <?php if ($result->num_rows > 0): ?>
+            <?php while ($row = $result->fetch_assoc()): ?>
+              <tr>
+                <td><?= htmlspecialchars($row['name']) ?></td>
+                <td><?= htmlspecialchars($row['phone']) ?></td>
+                <td class="text-start"><?= nl2br(htmlspecialchars($row['message'])) ?></td>
+                <td><?= $row['created_at'] ?? '-' ?></td>
+                <td>
+                  <a href="hapus_pesan.php?id=<?= $row['id'] ?>"
+                     class="btn btn-sm btn-danger"
+                     onclick="return confirm('Yakin ingin menghapus pesan ini?')">Hapus</a>
+                </td>
+              </tr>
+            <?php endwhile; ?>
+          <?php else: ?>
+            <tr>
+              <td colspan="5" class="text-center text-muted">Belum ada pesan masuk.</td>
+            </tr>
+          <?php endif; ?>
+        </tbody>
+      </table>
+    </div>
 
     <!-- Pagination -->
     <?php if ($total_pages > 1): ?>
