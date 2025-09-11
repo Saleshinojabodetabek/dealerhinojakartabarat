@@ -1,93 +1,74 @@
 <?php
 include "cek_login.php";
 include "config.php";
-
-// Ambil data artikel beserta nama kategori-nya
-$query = "
-  SELECT a.*, k.nama_kategori 
-  FROM artikel a
-  LEFT JOIN kategori k ON a.kategori_id = k.id
-  ORDER BY a.id DESC
-";
-$result = $conn->query($query);
 ?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Kelola Artikel</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Dashboard Admin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+    .sidebar {
+      height: 100vh; background: #0d6efd; color: white; padding-top: 20px;
+      position: fixed; width: 220px; text-align: center;
+    }
+    .sidebar img { max-width: 180px; margin-bottom: 20px; }
+    .sidebar a {
+      display: block; padding: 12px 20px; color: white; text-decoration: none;
+      margin: 4px 0; transition: background 0.2s; text-align: left;
+    }
+    .sidebar a:hover, .sidebar a.active {
+      background: #0b5ed7; border-radius: 6px;
+    }
+    .content { margin-left: 220px; padding: 20px; background: #f8f9fa; min-height: 100vh; }
+    .dashboard-header {
+      background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+      color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;
+    }
+    .card { border: none; border-radius: 12px; transition: 0.2s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .card h5 { color: #0d6efd; }
+    .btn-primary { background: #0d6efd; border: none; }
+    .btn-primary:hover { background: #0b5ed7; }
+  </style>
 </head>
-<body class="bg-light">
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="dashboard.php">Admin Panel</a>
-      <div class="d-flex">
-        <a href="logout.php" class="btn btn-outline-light btn-sm">Logout</a>
-      </div>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="text-center mb-4">
+      <img src="../images/logo3.png" alt="Logo Hino">
     </div>
-  </nav>
+    <a href="index.php" class="active">Dashboard</a>
+    <a href="artikel.php">Artikel</a>
+    <a href="pesan.php">Pesan Customer</a>
+    <a href="logout.php">Logout</a>
+  </div>
 
   <!-- Content -->
-  <div class="container mt-4">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h2 class="mb-0">Halo Cang Romi 👋 - Daftar Artikel</h2>
-      <a href="tambah_artikel.php" class="btn btn-success">+ Tambah Artikel</a>
+  <div class="content">
+    <div class="dashboard-header">
+      <h2>Selamat Datang, <?php echo $_SESSION['admin']; ?> 👋</h2>
+      <p>Kelola artikel & pesan customer melalui dashboard ini.</p>
     </div>
 
-    <div class="card shadow-lg border-0">
-      <div class="card-body">
-        <div class="table-responsive">
-          <table class="table table-hover align-middle">
-            <thead class="table-dark">
-              <tr>
-                <th>Judul</th>
-                <th>Kategori</th>
-                <th>Tanggal</th>
-                <th>Gambar</th>
-                <th>Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php if ($result->num_rows > 0): ?>
-                <?php while ($row = $result->fetch_assoc()): ?>
-                  <tr>
-                    <td><?= htmlspecialchars($row['judul']) ?></td>
-                    <td><?= htmlspecialchars($row['nama_kategori'] ?? 'Tidak ada') ?></td>
-                    <td><?= $row['tanggal'] ?></td>
-                    <td>
-                      <?php 
-                        $gambar_path = "uploads/" . $row['gambar'];
-                        if (!empty($row['gambar']) && file_exists($gambar_path)):
-                      ?>
-                        <img src="<?= $gambar_path ?>" width="100" class="rounded shadow-sm">
-                      <?php else: ?>
-                        <img src="https://via.placeholder.com/100x70?text=No+Image" class="rounded shadow-sm">
-                      <?php endif; ?>
-                    </td>
-                    <td>
-                      <a href="edit_artikel.php?id=<?= $row['id'] ?>" class="btn btn-sm btn-warning">✏️ Edit</a>
-                      <a href="hapus_artikel.php?id=<?= $row['id'] ?>" 
-                         class="btn btn-sm btn-danger"
-                         onclick="return confirm('Yakin ingin menghapus artikel ini?')">
-                         🗑️ Hapus
-                      </a>
-                    </td>
-                  </tr>
-                <?php endwhile; ?>
-              <?php else: ?>
-                <tr>
-                  <td colspan="5" class="text-center text-muted">Belum ada artikel</td>
-                </tr>
-              <?php endif; ?>
-            </tbody>
-          </table>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4 text-center">
+          <h5>📰 Kelola Artikel</h5>
+          <p>Tambah, edit, hapus artikel blog secara praktis.</p>
+          <a href="artikel.php" class="btn btn-primary">Lihat Artikel</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm p-4 text-center">
+          <h5>📩 Pesan Customer</h5>
+          <p>Lihat pesan yang dikirim melalui form kontak website.</p>
+          <a href="pesan.php" class="btn btn-primary">Lihat Pesan</a>
         </div>
       </div>
     </div>
   </div>
-
 </body>
 </html>
