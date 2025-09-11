@@ -36,6 +36,16 @@ $result = $conn->query($query);
       color: white; padding: 20px; border-radius: 12px; margin-bottom: 25px;
     }
     table img { border-radius: 6px; }
+    /* Header tabel selaras dengan dashboard */
+    .table thead th {
+      background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .table tbody td {
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -59,8 +69,8 @@ $result = $conn->query($query);
 
     <a href="tambah_artikel.php" class="btn btn-success mb-3">+ Tambah Artikel</a>
 
-    <table class="table table-bordered table-striped">
-      <thead class="table-dark">
+    <table class="table table-bordered table-striped align-middle text-center">
+      <thead>
         <tr>
           <th>Judul</th>
           <th>Kategori</th>
