@@ -49,7 +49,7 @@ include "config.php";
   <!-- Content -->
   <div class="content">
     <div class="dashboard-header">
-      <h2>Selamat Datang, <?php echo $_SESSION['admin']; ?> 👋</h2>
+      <h2>Selamat Datang, <?php echo $_SESSION['Cang Romi']; ?> 👋</h2>
       <p>Kelola artikel & pesan customer melalui dashboard ini.</p>
     </div>
 
