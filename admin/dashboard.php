@@ -38,7 +38,7 @@ include "config.php";
   <!-- Sidebar -->
   <div class="sidebar">
     <div class="text-center mb-4">
-      <img src="../images/logo3.png" alt="Logo Hino">
+      <img src="../img/logo3.png" alt="Logo Hino">
     </div>
     <a href="index.php" class="active">Dashboard</a>
     <a href="artikel.php">Artikel</a>
