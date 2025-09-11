@@ -2,7 +2,20 @@
 include "cek_login.php";
 include "config.php";
 
-$query = "SELECT * FROM contact_messages ORDER BY id DESC";
+// --- Pagination Setup ---
+$limit = 10; // jumlah pesan per halaman
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+if ($page < 1) $page = 1;
+$offset = ($page - 1) * $limit;
+
+// Hitung total pesan
+$total_query = $conn->query("SELECT COUNT(*) AS total FROM contact_messages");
+$total_row = $total_query->fetch_assoc();
+$total_pesan = $total_row['total'];
+$total_pages = ceil($total_pesan / $limit);
+
+// Ambil data pesan dengan limit
+$query = "SELECT * FROM contact_messages ORDER BY id DESC LIMIT $limit OFFSET $offset";
 $result = $conn->query($query);
 ?>
 <!DOCTYPE html>
@@ -31,6 +44,7 @@ $result = $conn->query($query);
       color: white; padding: 20px; border-radius: 12px; margin-bottom: 25px;
     }
     table td { vertical-align: top; }
+    .pagination a { margin: 0 4px; }
   </style>
 </head>
 <body>
@@ -75,7 +89,7 @@ $result = $conn->query($query);
               <td><?= nl2br(htmlspecialchars($row['message'])) ?></td>
               <td><?= $row['created_at'] ?? '-' ?></td>
               <td>
-                <a href="hapus_pesan.php?id=<?= $row['id'] ?>" 
+                <a href="hapus_pesan.php?id=<?= $row['id'] ?>"
                    class="btn btn-sm btn-danger"
                    onclick="return confirm('Yakin ingin menghapus pesan ini?')">Hapus</a>
               </td>
@@ -88,6 +102,27 @@ $result = $conn->query($query);
         <?php endif; ?>
       </tbody>
     </table>
+
+    <!-- Pagination -->
+    <?php if ($total_pages > 1): ?>
+      <nav>
+        <ul class="pagination">
+          <?php if ($page > 1): ?>
+            <li class="page-item"><a class="page-link" href="?page=<?= $page - 1 ?>">« Prev</a></li>
+          <?php endif; ?>
+          
+          <?php for ($i = 1; $i <= $total_pages; $i++): ?>
+            <li class="page-item <?= ($i == $page) ? 'active' : '' ?>">
+              <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+            </li>
+          <?php endfor; ?>
+
+          <?php if ($page < $total_pages): ?>
+            <li class="page-item"><a class="page-link" href="?page=<?= $page + 1 ?>">Next »</a></li>
+          <?php endif; ?>
+        </ul>
+      </nav>
+    <?php endif; ?>
   </div>
 </body>
 </html>

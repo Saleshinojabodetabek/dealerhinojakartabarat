@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       mysqli_stmt_bind_param($stmt, "sssi", $judul, $isi, $nama_file, $kategori_id);
 
       if (mysqli_stmt_execute($stmt)) {
-        header("Location: dashboard.php?success=1");
+        header("Location: artikel.php?success=1");
         exit;
       } else {
         $error = "Gagal menyimpan artikel. Error DB: " . mysqli_error($koneksi);
@@ -46,61 +46,95 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tambah Artikel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
+    body { font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+    .sidebar {
+      height: 100vh; background: #0d6efd; color: white; padding-top: 20px;
+      position: fixed; width: 220px; text-align: center;
     }
-    form {
-      max-width: 600px;
-      margin: auto;
+    .sidebar img { max-width: 160px; margin-bottom: 20px; }
+    .sidebar a {
+      display: block; padding: 12px 20px; color: white; text-decoration: none;
+      margin: 4px 0; transition: background 0.2s; text-align: left;
     }
-    input, textarea, select, button {
-      display: block;
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 10px;
+    .sidebar a:hover, .sidebar a.active {
+      background: #0b5ed7; border-radius: 6px;
     }
-    .error {
-      color: red;
-      margin-bottom: 20px;
+    .content { margin-left: 220px; padding: 20px; background: #f8f9fa; min-height: 100vh; }
+    .dashboard-header {
+      background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+      color: white; padding: 20px; border-radius: 12px; margin-bottom: 25px;
+    }
+    .form-card {
+      background: white; padding: 25px; border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
-  <h2>Tambah Artikel Baru</h2>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="text-center mb-4">
+      <img src="../img/logo3.png" alt="Logo Hino">
+    </div>
+    <a href="index.php">Dashboard</a>
+    <a href="artikel.php" class="active">Artikel</a>
+    <a href="pesan.php">Pesan Customer</a>
+    <a href="logout.php">Logout</a>
+  </div>
 
-  <?php if (!empty($error)) echo "<p class='error'>$error</p>"; ?>
+  <!-- Content -->
+  <div class="content">
+    <div class="dashboard-header">
+      <h2>📝 Tambah Artikel Baru</h2>
+      <p>Isi form di bawah untuk menambahkan artikel ke website.</p>
+    </div>
 
-  <form action="" method="POST" enctype="multipart/form-data">
-    <label for="judul">Judul Artikel:</label>
-    <input type="text" name="judul" id="judul" required>
+    <div class="form-card">
+      <?php if (!empty($error)): ?>
+        <div class="alert alert-danger"><?= $error ?></div>
+      <?php endif; ?>
 
-    <label for="isi">Isi Artikel:</label>
-    <textarea name="isi" id="isi" rows="10" required></textarea>
+      <form action="" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="judul" class="form-label">Judul Artikel</label>
+          <input type="text" name="judul" id="judul" class="form-control" required>
+        </div>
 
-    <label for="kategori_id">Kategori:</label>
-    <select name="kategori_id" id="kategori_id" required>
-      <option value="">-- Pilih Kategori --</option>
-      <?php
-        $kategori = mysqli_query($koneksi, "SELECT id, nama_kategori FROM kategori ORDER BY nama_kategori ASC");
-        while ($row = mysqli_fetch_assoc($kategori)) {
-          echo "<option value='{$row['id']}'>{$row['nama_kategori']}</option>";
-        }
-      ?>
-    </select>
+        <div class="mb-3">
+          <label for="isi" class="form-label">Isi Artikel</label>
+          <textarea name="isi" id="isi" rows="8" class="form-control" required></textarea>
+        </div>
 
-    <label for="gambar">Upload Gambar:</label>
-    <input type="file" name="gambar" id="gambar" accept="image/*" required>
+        <div class="mb-3">
+          <label for="kategori_id" class="form-label">Kategori</label>
+          <select name="kategori_id" id="kategori_id" class="form-select" required>
+            <option value="">-- Pilih Kategori --</option>
+            <?php
+              $kategori = mysqli_query($koneksi, "SELECT id, nama_kategori FROM kategori ORDER BY nama_kategori ASC");
+              while ($row = mysqli_fetch_assoc($kategori)) {
+                echo "<option value='{$row['id']}'>{$row['nama_kategori']}</option>";
+              }
+            ?>
+          </select>
+        </div>
 
-    <button type="submit">Simpan Artikel</button>
-  </form>
+        <div class="mb-3">
+          <label for="gambar" class="form-label">Upload Gambar</label>
+          <input type="file" name="gambar" id="gambar" class="form-control" accept="image/*" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">💾 Simpan Artikel</button>
+        <a href="artikel.php" class="btn btn-secondary">⬅ Kembali</a>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
