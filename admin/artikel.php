@@ -36,7 +36,6 @@ $result = $conn->query($query);
       color: white; padding: 20px; border-radius: 12px; margin-bottom: 25px;
     }
     table img { border-radius: 6px; }
-    /* Header tabel selaras dengan dashboard */
     .table thead th {
       background: linear-gradient(90deg, #0d6efd, #0b5ed7);
       color: white;
@@ -66,6 +65,17 @@ $result = $conn->query($query);
       <h2>📑 Kelola Artikel</h2>
       <p>Tambah, edit, dan hapus artikel blog.</p>
     </div>
+
+    <!-- Notifikasi -->
+    <?php if (isset($_GET['status'])): ?>
+      <?php if ($_GET['status'] === 'added'): ?>
+        <div class="alert alert-success">Artikel berhasil ditambahkan.</div>
+      <?php elseif ($_GET['status'] === 'edited'): ?>
+        <div class="alert alert-info">Artikel berhasil diperbarui.</div>
+      <?php elseif ($_GET['status'] === 'deleted'): ?>
+        <div class="alert alert-success">Artikel berhasil dihapus.</div>
+      <?php endif; ?>
+    <?php endif; ?>
 
     <a href="tambah_artikel.php" class="btn btn-success mb-3">+ Tambah Artikel</a>
 
