@@ -15,7 +15,7 @@ include "config.php";
       height: 100vh; background: #0d6efd; color: white; padding-top: 20px;
       position: fixed; width: 220px; text-align: center;
     }
-    .sidebar img { max-width: 180px; margin-bottom: 20px; }
+    .sidebar img { max-width: 160px; margin-bottom: 20px; }
     .sidebar a {
       display: block; padding: 12px 20px; color: white; text-decoration: none;
       margin: 4px 0; transition: background 0.2s; text-align: left;
@@ -26,11 +26,11 @@ include "config.php";
     .content { margin-left: 220px; padding: 20px; background: #f8f9fa; min-height: 100vh; }
     .dashboard-header {
       background: linear-gradient(90deg, #0d6efd, #0b5ed7);
-      color: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;
+      color: white; padding: 20px; border-radius: 12px; margin-bottom: 25px;
     }
     .card { border: none; border-radius: 12px; transition: 0.2s; }
     .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
-    .card h5 { color: #0d6efd; }
+    .card h5 { color: #0d6efd; margin-bottom: 12px; }
     .btn-primary { background: #0d6efd; border: none; }
     .btn-primary:hover { background: #0b5ed7; }
 
@@ -46,19 +46,13 @@ include "config.php";
         align-items: center;
         padding: 10px;
       }
-      .sidebar img {
-        max-width: 100px;
-        margin: 0;
-      }
+      .sidebar img { max-width: 100px; margin: 0; }
       .sidebar a {
         display: inline-block;
         margin: 0 6px;
         padding: 8px 12px;
       }
-      .content {
-        margin-left: 0;
-        margin-top: 10px;
-      }
+      .content { margin-left: 0; margin-top: 10px; }
     }
     @media (max-width: 768px) {
       .dashboard-header h2 { font-size: 20px; }
@@ -68,8 +62,10 @@ include "config.php";
       .btn-primary { font-size: 14px; padding: 6px 12px; }
     }
     @media (max-width: 576px) {
-      .sidebar a { font-size: 14px; padding: 6px 8px; }
+      .sidebar a { font-size: 13px; padding: 6px 8px; }
       .dashboard-header { padding: 15px; }
+      .dashboard-header h2 { font-size: 18px; }
+      .dashboard-header p { font-size: 13px; }
       .card h5 { font-size: 14px; }
       .card p { font-size: 12px; }
     }
@@ -81,7 +77,7 @@ include "config.php";
     <div class="text-center mb-4 d-none d-lg-block">
       <img src="../img/logo3.png" alt="Logo Hino">
     </div>
-    <a href="index.php" class="active">Dashboard</a>
+    <a href="dashboard.php" class="active">Dashboard</a>
     <a href="artikel.php">Artikel</a>
     <a href="pesan.php">Pesan Customer</a>
     <a href="logout.php">Logout</a>

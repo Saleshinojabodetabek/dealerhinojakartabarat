@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       mysqli_stmt_bind_param($stmt, "sssi", $judul, $isi, $nama_file, $kategori_id);
 
       if (mysqli_stmt_execute($stmt)) {
-        header("Location: artikel.php?success=1");
+        header("Location: artikel.php?status=added");
         exit;
       } else {
         $error = "Gagal menyimpan artikel. Error DB: " . mysqli_error($koneksi);
@@ -82,31 +82,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     /* === Media Query === */
-    @media (max-width: 991px) {
+    @media (max-width: 992px) {
       .sidebar {
         position: relative;
         width: 100%;
         height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
         padding: 10px;
       }
-      .sidebar img { max-width: 120px; margin: 10px auto; }
-      .sidebar a { text-align: center; padding: 10px; }
-      .content { margin-left: 0; padding: 15px; }
+      .sidebar img { max-width: 100px; margin: 0; }
+      .sidebar a {
+        display: inline-block;
+        margin: 0 6px;
+        padding: 8px 12px;
+      }
+      .content { margin-left: 0; margin-top: 10px; padding: 15px; }
     }
-
+    @media (max-width: 768px) {
+      .dashboard-header h2 { font-size: 20px; }
+      .dashboard-header p { font-size: 14px; }
+      .form-card { padding: 18px; }
+      .btn { font-size: 14px; padding: 6px 12px; }
+    }
     @media (max-width: 576px) {
-      .dashboard-header h2 { font-size: 1.2rem; }
-      .dashboard-header p { font-size: 0.9rem; }
+      .sidebar a { font-size: 13px; padding: 6px 8px; }
+      .dashboard-header { padding: 15px; }
+      .dashboard-header h2 { font-size: 18px; }
+      .dashboard-header p { font-size: 13px; }
       .form-card { padding: 15px; }
       .form-card .form-label { font-size: 0.9rem; }
-      .btn { padding: 6px 12px; font-size: 0.9rem; }
+      .btn { padding: 6px 10px; font-size: 0.85rem; }
     }
   </style>
 </head>
 <body>
   <!-- Sidebar -->
   <div class="sidebar">
-    <div class="text-center mb-4">
+    <div class="text-center mb-4 d-none d-lg-block">
       <img src="../img/logo3.png" alt="Logo Hino">
     </div>
     <a href="dashboard.php">Dashboard</a>
@@ -121,6 +136,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <h2>📝 Tambah Artikel Baru</h2>
       <p>Isi form di bawah untuk menambahkan artikel ke website.</p>
     </div>
+
+    <?php if (!empty($error)): ?>
+      <div class="alert alert-danger"><?= $error ?></div>
+    <?php endif; ?>
 
     <div class="form-card">
       <form action="" method="POST" enctype="multipart/form-data">
