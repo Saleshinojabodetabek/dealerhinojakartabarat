@@ -53,7 +53,7 @@ $result = $conn->query($query);
     <div class="text-center mb-4">
       <img src="../img/logo3.png" alt="Logo Hino">
     </div>
-    <a href="index.php">Dashboard</a>
+    <a href="dashboard.php">Dashboard</a>
     <a href="artikel.php">Artikel</a>
     <a href="pesan.php" class="active">Pesan Customer</a>
     <a href="logout.php">Logout</a>
