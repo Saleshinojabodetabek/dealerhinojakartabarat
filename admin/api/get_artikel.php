@@ -38,7 +38,7 @@ $artikel = [];
 
 // Loop hasil dan ubah URL gambar jadi lengkap
 while ($row = $result->fetch_assoc()) {
-  $row['gambar'] = 'https://saleshinoindonesia.com/admin/uploads/' . $row['gambar'];
+  $row['gambar'] = 'https://dealerhinojakartabarat.com/admin/uploads/' . $row['gambar'];
   $artikel[] = $row;
 }
 
