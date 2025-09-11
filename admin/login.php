@@ -7,7 +7,7 @@
 </head>
 <body class="bg-light">
   <div class="container" style="max-width: 400px; margin-top: 100px;">
-    <h3 class="text-center mb-4">Login Admin Blog</h3>
+    <h3 class="text-center mb-4">Login Admin</h3>
     <?php if (isset($_SESSION['error'])): ?>
       <div class="alert alert-danger"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
     <?php endif; ?>
