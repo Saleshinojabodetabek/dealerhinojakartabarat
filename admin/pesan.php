@@ -52,6 +52,10 @@ $result = $conn->query($query);
       <p>Daftar pesan yang dikirim melalui form kontak website.</p>
     </div>
 
+    <?php if (isset($_GET['status']) && $_GET['status'] === 'deleted'): ?>
+      <div class="alert alert-success">Pesan berhasil dihapus.</div>
+    <?php endif; ?>
+
     <table class="table table-bordered table-striped">
       <thead class="table-dark">
         <tr>
@@ -59,17 +63,29 @@ $result = $conn->query($query);
           <th>No. HP</th>
           <th>Pesan</th>
           <th>Tanggal</th>
+          <th>Aksi</th>
         </tr>
       </thead>
       <tbody>
-        <?php while ($row = $result->fetch_assoc()): ?>
+        <?php if ($result->num_rows > 0): ?>
+          <?php while ($row = $result->fetch_assoc()): ?>
+            <tr>
+              <td><?= htmlspecialchars($row['name']) ?></td>
+              <td><?= htmlspecialchars($row['phone']) ?></td>
+              <td><?= nl2br(htmlspecialchars($row['message'])) ?></td>
+              <td><?= $row['created_at'] ?? '-' ?></td>
+              <td>
+                <a href="hapus_pesan.php?id=<?= $row['id'] ?>" 
+                   class="btn btn-sm btn-danger"
+                   onclick="return confirm('Yakin ingin menghapus pesan ini?')">Hapus</a>
+              </td>
+            </tr>
+          <?php endwhile; ?>
+        <?php else: ?>
           <tr>
-            <td><?= htmlspecialchars($row['name']) ?></td>
-            <td><?= htmlspecialchars($row['phone']) ?></td>
-            <td><?= nl2br(htmlspecialchars($row['message'])) ?></td>
-            <td><?= $row['created_at'] ?? '-' ?></td>
+            <td colspan="5" class="text-center text-muted">Belum ada pesan masuk.</td>
           </tr>
-        <?php endwhile; ?>
+        <?php endif; ?>
       </tbody>
     </table>
   </div>
