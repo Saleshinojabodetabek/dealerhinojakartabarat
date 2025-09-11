@@ -44,7 +44,18 @@ $result = $conn->query($query);
       color: white; padding: 20px; border-radius: 12px; margin-bottom: 25px;
     }
     table td { vertical-align: top; }
-    .pagination a { margin: 0 4px; }
+    /* Header tabel selaras dengan tema */
+    .table thead th {
+      background: linear-gradient(90deg, #0d6efd, #0b5ed7);
+      color: white;
+      text-align: center;
+    }
+    .table tbody td { vertical-align: middle; }
+    .pagination .page-link { color: #0d6efd; }
+    .pagination .active .page-link {
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+    }
   </style>
 </head>
 <body>
@@ -70,8 +81,8 @@ $result = $conn->query($query);
       <div class="alert alert-success">Pesan berhasil dihapus.</div>
     <?php endif; ?>
 
-    <table class="table table-bordered table-striped">
-      <thead class="table-dark">
+    <table class="table table-bordered table-striped align-middle text-center">
+      <thead>
         <tr>
           <th>Nama</th>
           <th>No. HP</th>
@@ -86,7 +97,7 @@ $result = $conn->query($query);
             <tr>
               <td><?= htmlspecialchars($row['name']) ?></td>
               <td><?= htmlspecialchars($row['phone']) ?></td>
-              <td><?= nl2br(htmlspecialchars($row['message'])) ?></td>
+              <td class="text-start"><?= nl2br(htmlspecialchars($row['message'])) ?></td>
               <td><?= $row['created_at'] ?? '-' ?></td>
               <td>
                 <a href="hapus_pesan.php?id=<?= $row['id'] ?>"
@@ -106,7 +117,7 @@ $result = $conn->query($query);
     <!-- Pagination -->
     <?php if ($total_pages > 1): ?>
       <nav>
-        <ul class="pagination">
+        <ul class="pagination justify-content-center">
           <?php if ($page > 1): ?>
             <li class="page-item"><a class="page-link" href="?page=<?= $page - 1 ?>">« Prev</a></li>
           <?php endif; ?>
