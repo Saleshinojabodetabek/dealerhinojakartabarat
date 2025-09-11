@@ -128,7 +128,7 @@
       <div class="container">
         <h2>Sales Hino No.1 Dengan Layanan Profesional & Cepat</h2>
         <p>Profesional, cepat, dan siap memberikan solusi terbaik untuk kebutuhan truk bisnis Anda. Layanan responsif, proses mudah, dan harga kompetitif!</p>
-        <a href="https://wa.me/+628226286007?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google" class="btn btn-contact">Hubungi Sekarang</a>
+        <a href="https://wa.me/+6282226286007?text=Halo%20Saya%20Dapat%20Nomor%20Anda%20Dari%20Google" class="btn btn-contact">Hubungi Sekarang</a>
       </div>
     </section>
     
